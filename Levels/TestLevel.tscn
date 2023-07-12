@@ -1,0 +1,46 @@
+[gd_scene load_steps=11 format=3 uid="uid://cvw3t1e27urek"]
+
+[ext_resource type="Script" path="res://GameScript.gd" id="1_5qrtn"]
+[ext_resource type="Texture2D" uid="uid://dpu0q5n7q4d25" path="res://Resources/2 Background/Day/1.png" id="2_bx878"]
+[ext_resource type="Texture2D" uid="uid://d2jengweq6vq" path="res://Resources/2 Background/Day/2.png" id="3_ja7sv"]
+[ext_resource type="Texture2D" uid="uid://cv34p14163kvt" path="res://Resources/2 Background/Day/3.png" id="4_ado6m"]
+[ext_resource type="Texture2D" uid="uid://ddgxgdre7exox" path="res://Resources/2 Background/Day/4.png" id="5_y228k"]
+[ext_resource type="Texture2D" uid="uid://cjsbfwekdqqyf" path="res://Resources/2 Background/Day/5.png" id="6_pfts3"]
+[ext_resource type="PackedScene" uid="uid://buwd87vlsmjq7" path="res://Levels/RuinedCityTileMap.tscn" id="7_k2woh"]
+[ext_resource type="PackedScene" uid="uid://dv8qcqwy2qkao" path="res://Scenes/Characters/unitbase.tscn" id="8_ojw0n"]
+[ext_resource type="PackedScene" uid="uid://c40ph7guntrwc" path="res://Scenes/Characters/infantry.tscn" id="9_kbj4n"]
+[ext_resource type="PackedScene" uid="uid://842hgfs0vlr8" path="res://Scenes/Characters/destroyer.tscn" id="10_yclb8"]
+
+[node name="TestLevel" type="Node2D"]
+script = ExtResource("1_5qrtn")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.995, 1.995)
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="1" type="Sprite2D" parent="Node2D"]
+texture = ExtResource("2_bx878")
+
+[node name="2" type="Sprite2D" parent="Node2D"]
+texture = ExtResource("3_ja7sv")
+
+[node name="3" type="Sprite2D" parent="Node2D"]
+texture = ExtResource("4_ado6m")
+
+[node name="4" type="Sprite2D" parent="Node2D"]
+texture = ExtResource("5_y228k")
+
+[node name="5" type="Sprite2D" parent="Node2D"]
+texture = ExtResource("6_pfts3")
+
+[node name="TileMap" parent="." instance=ExtResource("7_k2woh")]
+
+[node name="Swordsman" parent="." instance=ExtResource("8_ojw0n")]
+position = Vector2(17, 60)
+
+[node name="Infantryman" parent="." instance=ExtResource("9_kbj4n")]
+position = Vector2(-107, 15)
+
+[node name="Destroyer" parent="." instance=ExtResource("10_yclb8")]
+position = Vector2(87, -49)

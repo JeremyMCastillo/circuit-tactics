@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://mstdsp02mtak"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5mdsa"]
+animation = &"enabling"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_cxevo"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3tcg7"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_iuvn1"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_vjxvj"]
+states/Start/position = Vector2(193, 100)
+states/enabling/node = SubResource("AnimationNodeAnimation_5mdsa")
+states/enabling/position = Vector2(327, 100)
+states/idle/node = SubResource("AnimationNodeAnimation_cxevo")
+states/idle/position = Vector2(500, 97)
+transitions = ["Start", "enabling", SubResource("AnimationNodeStateMachineTransition_3tcg7"), "enabling", "idle", SubResource("AnimationNodeStateMachineTransition_iuvn1")]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_80meg"]
+
+[node name="AnimationTree" type="AnimationTree"]
+tree_root = SubResource("AnimationNodeStateMachine_vjxvj")
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource("AnimationNodeStateMachinePlayback_80meg")
