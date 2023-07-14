@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqjqh62cyn85k"]
+
+[ext_resource type="Texture2D" uid="uid://j7jchan40h67" path="res://Resources/card-back.png" id="1_tmngp"]
+[ext_resource type="Script" path="res://Scenes/Cards/attack_front.gd" id="1_vlcl3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2xmqa"]
+size = Vector2(96, 128)
+
+[node name="attack_front" type="Area2D"]
+script = ExtResource("1_vlcl3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_tmngp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2xmqa")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cvw3t1e27urek"]
+[gd_scene load_steps=12 format=3 uid="uid://cvw3t1e27urek"]
 
 [ext_resource type="Script" path="res://GameScript.gd" id="1_5qrtn"]
 [ext_resource type="Texture2D" uid="uid://dpu0q5n7q4d25" path="res://Resources/2 Background/Day/1.png" id="2_bx878"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dv8qcqwy2qkao" path="res://Scenes/Characters/unitbase.tscn" id="8_ojw0n"]
 [ext_resource type="PackedScene" uid="uid://c40ph7guntrwc" path="res://Scenes/Characters/infantry.tscn" id="9_kbj4n"]
 [ext_resource type="PackedScene" uid="uid://842hgfs0vlr8" path="res://Scenes/Characters/destroyer.tscn" id="10_yclb8"]
+[ext_resource type="PackedScene" uid="uid://bqjqh62cyn85k" path="res://Scenes/Cards/attack_front.tscn" id="11_kxc0i"]
 
 [node name="TestLevel" type="Node2D"]
 script = ExtResource("1_5qrtn")
@@ -44,3 +45,6 @@ position = Vector2(-107, 15)
 
 [node name="Destroyer" parent="." instance=ExtResource("10_yclb8")]
 position = Vector2(87, -49)
+
+[node name="attack_front" parent="." instance=ExtResource("11_kxc0i")]
+position = Vector2(-228, -71)
