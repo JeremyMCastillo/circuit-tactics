@@ -318,7 +318,7 @@ _data = {
 "idle": SubResource("Animation_2my5u")
 }
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_ypmaa"]
+[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_ayx6c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sotsg"]
 size = Vector2(38, 73)
@@ -336,7 +336,7 @@ libraries = {
 }
 
 [node name="AnimationTree" parent="." instance=ExtResource("5_xyont")]
-parameters/playback = SubResource("AnimationNodeStateMachinePlayback_ypmaa")
+parameters/playback = SubResource("AnimationNodeStateMachinePlayback_ayx6c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 27.5)

@@ -216,7 +216,7 @@ _data = {
 "idle": SubResource("Animation_e4c7j")
 }
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_3ucpu"]
+[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_tl2wn"]
 
 [node name="UnitBase" type="CharacterBody2D"]
 script = ExtResource("1_xr4te")
@@ -241,6 +241,6 @@ libraries = {
 }
 
 [node name="AnimationTree" parent="." instance=ExtResource("5_6jn0x")]
-parameters/playback = SubResource("AnimationNodeStateMachinePlayback_3ucpu")
+parameters/playback = SubResource("AnimationNodeStateMachinePlayback_tl2wn")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
